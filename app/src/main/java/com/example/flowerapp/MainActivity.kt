@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
          binding = ActivityMainBinding.inflate(layoutInflater)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
          binding.flowerRv.layoutManager = LinearLayoutManager(this)
         flower.add(Flower("Rose",20,4.0,R.drawable.mango,"Rose"))
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
 
         flowerAdapter.onClick={
-            val intent = Intent(this,DetailActivity::class.java)
+            val intent = Intent(this,Activity_details::class.java)
             intent.putExtra("flower",it.flowerName)
             intent.putExtra("price",it.flowerPrice)
             intent.putExtra("quantity",it.flowerQnt)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
      private  fun showFlowerAddDialog(){
-         val dialogView = layoutInflater.from(this).inflate(R.layout.add_flower,null)
+         val dialogView = layoutInflater.inflate(R.layout.add_flower,null)
          val nameEt = dialogView.findViewById<EditText>(R.id.flowerNameEt)
          val priceEt = dialogView.findViewById<EditText>(R.id.flowerPriceEt)
          val qntEt = dialogView.findViewById<EditText>(R.id.flowerQntEt)
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                  val qnt = qntEt.text.toString().toInt()
                  val desc = descEt.text.toString()
                  val img = R.drawable.cherry
-                 flower.add(flower(name, qnt, price, img, desc))
+                 flower.add(Flower(name, qnt, price, img, desc))
                  flowerAdapter.notifyItemInserted(flower.size - 1)
              }
              .setNegativeButton("Cancel", null)
