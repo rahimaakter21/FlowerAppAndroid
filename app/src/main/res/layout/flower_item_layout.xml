@@ -48,7 +48,7 @@
             android:text="Quantity: 20"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/fruitPrice"
+            app:layout_constraintBottom_toTopOf="@+id/flowerPrice"
             app:layout_constraintEnd_toEndOf="@+id/flowerName"
             app:layout_constraintStart_toStartOf="@+id/flowerName"
             app:layout_constraintTop_toBottomOf="@+id/flowerName" />

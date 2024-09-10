@@ -37,7 +37,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cherry"
+                    android:src="@drawable/lily"
                     app:civ_border_color="#03A9F4"
                     app:civ_border_width="2dp" />
 
@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Rose"
+                android:text="Lily"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
